@@ -111,9 +111,9 @@ disableHugoGeneratorInject = false
     name = "github"
     url  = "https://github.com/RansonDrew"
 
-  # [[params.social]]
-  #   name = "linkedin"
-  #   url  = "https://www.linkedin.com/"
+  [[params.social]]
+    name = "instagram"
+    url  = "https://www.instagram.com/ransondrew"
 
   [[params.social]]
     name = "facebook"
