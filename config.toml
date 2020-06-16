@@ -1,78 +1,141 @@
-# Site settings
-baseurl = "https://turdballs.com/"
-languageCode = "en"
-title = "Turdballs Blog"
-theme = "hugo-theme-cactus-plus"
-# Set the value to true if your site include CJK (Chinese, Japanese, and Korean languages) characters
-hasCJKLanguage = false
+baseURL = "https://turdballs.com/"
+title   = "Turdballs Blog"
+languageCode = "en-us"
+theme = "hello-friend-ng"
+
+PygmentsCodeFences = true
+PygmentsStyle = "monokai"
+
+paginate  = 10
+rssLimit  = 10  # Maximum number of items in the RSS feed.
+copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License." # This message is only used by the RSS template.
+
+# googleAnalytics = ""
+# disqusShortname = ""
+
+archetypeDir = "archetypes"
+contentDir   = "content"
+dataDir      = "data"
+layoutDir    = "layouts"
+publishDir   = "public"
+
+buildDrafts  = false
+buildFuture  = false
+buildExpired = false
+canonifyURLs = true
+
+enableRobotsTXT = true
+enableGitInfo   = false
+enableEmoji     = true
+enableMissingTranslationPlaceholders = false
+disableRSS     = false
+disableSitemap = false
+disable404     = false
+disableHugoGeneratorInject = false
+
+[permalinks]
+  # posts = "/posts/:year/:month/:title/"
+
+[author]
+  name = "Drew Fowler"
+
+[blackfriday]
+  hrefTargetBlank = true
+
+[taxonomies]
+  tag      = "tags"
+  category = "categories"
+  series   = "series"
 
 [params]
-	author = "Drew Fowler"
-	description = "Turdballs.com Blog"
-	bio = "This Blog is just a bunch of turdballs."
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006-01-02"
+  dateformNumTime = "2006-01-02 15:04 -0700"
 
-	twitter = "RansonDrew"
-	facebook = "ZombieSant"
+  # Metadata mostly used in document's head
+  description = "Nice theme for homepages and blogs"
+  keywords = ""
+  images = [""]
 
-	enableRSS = true
-	enableToc = true
+  homeSubtitle = "A blog by turdballs for turdballs about turdballs"
 
-	enableDisqus = false
-	disqusShortname = "your_disqus_short_name"
+  # Prefix of link to the git commit detail page. GitInfo must be enabled.
+  # gitUrl = ""
 
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
 
-	enableSummary = true
-	# Set the value to true if use description in post front matter replace content summary
-	useDescriptionReplaceSummary = false
+  # Integrate Javascript files or stylesheets by adding the url to the external assets or by
+  # linking local files with their path relative to the static folder, e.g. "css/styles.css"
+  customCSS = []
+  customJS  = []
 
+  # Toggle this option need to rebuild SCSS, requires extended version of Hugo
+  justifyContent = false  # Set "text-align: justify" to .content.
 
-	enableGoogleAnalytics = false
-	enableBaiduAnalytics = false
-	# Set the value to your baidu analysis code if you want to use baidu analytics
-	baiduAnalytics = 'your_baidu_analysis_code'
+  # Default theme "light" or "dark"
+  defaultTheme = "dark"
+  themeColor = "#252627"
 
-	enableTwitterCard = true
-	# The url for twitter card image, default is avatar.png in static/images directory
-	twitterCardImage = ""
+  # Colors for favicons
+  [params.favicon.color]
+    mask = "#252627"
+    msapplication = "#252627"
+    theme = "#252627"
 
-	# Add custom assets with their paths relative to the static folder
-	customCSS = []
-	customJS  = []
+  [params.logo]
+    logoText     = "$ cd /home/"
+    logoHomeLink = "/"
+    # Set true to remove the logo cursor entirely.
+    # logoCursorDisabled = false
+    # Set to a valid CSS color to change the cursor in the logo.
+    # logoCursorColor    = "#67a2c9"
+    # Set to a valid CSS time value to change the animation duration, "0s" to disable.
+    # logoCursorAnimate  = "2s"
 
-	# The variables below are optionally too and can be used to
-	# translate or customize each string of the theme.
+  [params.portrait]
+    # path = "/img/image.jpg"
+    # alt = "Portrait"
 
-	# Navigation links
-	home = ""
-	about = ""
-	archive = ""
-	subscribe = ""
+  # Social icons
+  [[params.social]]
+    name = "twitter"
+    url  = "https://twitter.com/RansonDrew"
 
-	olderPosts = ""
-	newerPosts = ""
-	copyright = ""
+  # [[params.social]]
+  #   name = "email"
+  #   url  = "mailto:nobody@example.com"
 
-	# show latest posts in single page
-	showLatestPosts = false
-	readMore = ""
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/RansonDrew"
 
-	# Share
-	enableShare = true
-	tweet = ""
-	share = ""
+  # [[params.social]]
+  #   name = "linkedin"
+  #   url  = "https://www.linkedin.com/"
 
-	# 404 page
-	title404 = ""
-	subtitle404 = ""
+  # [[params.social]]
+  #   name = "stackoverflow"
+  #   url  = "https://www.stackoverflow.com/"
 
-	# Choose a font for the social icons in the footer. Either "mono-social" or "font-awesome"
-	iconFont = "font-awesome"
-  # The social icons can be styled differently if you use mono as font - circle, rounded, or empty
-  socialIconStyle = ""
+[languages]
+  [languages.en]
+    subtitle  = "Turdballs Blog"
+    weight    = 1
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
+  # [languages.fr]
+  #   subtitle  = "Hello Friend NG Theme"
+  #   weight    = 2
+  #   copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
 
-# Add additional social link entries underneath
-[social]
-	facebook-square = "https://www.facebook.com/ZombieSaint"
-	twitter-square = "https://www.twitter.com/RansonDrew"
-	github-square = "https://www.github.com/RansonDrew"
+[menu]
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "about/"
+  [[menu.main]]
+    identifier = "posts"
+    name       = "Posts"
+    url        = "posts/"
