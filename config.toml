@@ -1,5 +1,5 @@
 # Site settings
-baseurl = "https://turdballs.com"
+baseurl = "https://turdballs.com/"
 languageCode = "en"
 title = "Turdballs Blog"
 theme = "hugo-theme-cactus-plus"
